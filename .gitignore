@@ -1,4 +1,6 @@
 # compiled output
+dist
+dist/*
 /dist
 /tmp
 /out-tsc
@@ -57,8 +59,9 @@ yarn-error.log*
 
 
 # Dependency directories
-node_modules/
-jspm_packages/
+node_modules
+node_modules/*
+jspm_packages
 
 # Optional npm cache directory
 .npm
@@ -84,7 +87,6 @@ env
 venv
 env/*
 venv/*
-
 
 # next.js build output
 .next

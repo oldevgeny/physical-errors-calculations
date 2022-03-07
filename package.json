@@ -1,0 +1,84 @@
+{
+  "name": "physical-errors-calculations",
+  "version": "0.0.1",
+  "description": "Application for calculation physical errors.",
+  "main": "src/electron.js",
+  "author": "SuperProgrammer",
+  "license": "MIT",
+  "keywords": [
+    "js",
+    "electron"
+  ],
+  "build": {
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "files": [
+      "src/electron.js",
+      "**/*",
+      "static/**/*",
+      "build/**/icon.*"
+    ],
+    "nsis": {
+      "runAfterFinish": false
+    },
+    "productName": "PhysicalErrorsCalculations",
+    "appId": "test.PhysicalErrorsCalculations",
+    "mac": {
+      "icon": "build/images/icon.png"
+    },
+    "win": {
+      "icon": "build/images/icon.png"
+    },
+    "linux": {
+      "icon": "build/images/icon.png"
+    }
+  },
+  "scripts": {
+    "test": "echo 0",
+    "start": "electron .",
+    "build": "npx webpack --progress --mode=development",
+    "build:watch": "npx webpack --progress -w --mode=development",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-private-methods": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.14.5",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "autoprefixer": "^10.0.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.2",
+    "css-loader": "^5.0.1",
+    "electron": "^15.2.0",
+    "electron-builder": "^22.14.5",
+    "electron-is-dev": "^2.0.0",
+    "eslint": "^7.14.0",
+    "html-webpack-plugin": "^4.5.2",
+    "mini-css-extract-plugin": "^1.3.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^4.1.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "~1.2.1",
+    "stylelint": "^13.8.0",
+    "thread-loader": "^3.0.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
