@@ -4,7 +4,7 @@
 
 1) install dependencies
 ```
-npm install && npm start
+npm install
 ```
 
 2) build app
