@@ -1,4 +1,7 @@
 # compiled output
+/release
+release
+release/*
 dist
 dist/*
 /dist

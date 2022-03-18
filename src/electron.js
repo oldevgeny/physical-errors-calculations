@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const isDev = require('electron-is-dev');
+// const isDev = require('electron-is-dev');
+//    "electron-is-dev": "^2.0.0",
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -15,9 +16,9 @@ function createWindow() {
 
     void win.loadURL(`file://${path.join(__dirname, '../dist/index.html')}`);
     // Open the DevTools.
-    if (isDev) {
-        win.webContents.openDevTools({ mode: 'detach' });
-    }
+    // if (isDev) {
+    //     win.webContents.openDevTools({ mode: 'detach' });
+    // }
 }
 
 app.whenReady().then(() => {
