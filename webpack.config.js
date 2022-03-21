@@ -112,7 +112,7 @@ module.exports = (env, options) => {
             // new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 customPath: isWindows ?
-                    path.resolve(__dirname, `dist\\js\\bundle.js`) :
+                    path.resolve('../../../dist/js/bundle.js') :
                     path.resolve(__dirname, 'dist/js/bundle.js'),
                 template: 'src/index.html',
             }),
