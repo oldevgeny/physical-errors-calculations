@@ -16,7 +16,7 @@ npm run build
 
 never-ending build (useful for developers)
 ```
-npm run build:watch
+npm run build:w
 ```
 
 3) start app
