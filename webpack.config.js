@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const os = require('os');
 
@@ -94,22 +93,7 @@ module.exports = (env, options) => {
             ],
         },
 
-        // resolve: {
-        //     extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss', '.css'],
-        //     alias: {
-        //         'Components': path.resolve(__dirname, '../src/components/'),
-        //         'Const': path.resolve(__dirname, '../src/const/'),
-        //         'Utils': path.resolve(__dirname, '../src/utils/'),
-        //         'Redux': path.resolve(__dirname, '../src/redux/'),
-        //         'Network': path.resolve(__dirname, '../src/network/'),
-        //         'Interfaces': path.resolve(__dirname, '../src/interfaces/'),
-        //         'Static': path.resolve(__dirname, '../src/static/'),
-        //         'Styles': path.resolve(__dirname, '../src/styles/'),
-        //     },
-        // },
-
         plugins: [
-            // new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 customPath: isWindows ?
                     path.resolve('../../../dist/js/bundle.js') :
@@ -125,6 +109,5 @@ module.exports = (env, options) => {
             path: path.resolve(__dirname, './dist'),
             publicPath: '/',
         },
-        // devServer: require('./devServer'),
     };
 };

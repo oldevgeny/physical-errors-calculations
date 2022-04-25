@@ -5,9 +5,18 @@ const isDev = require('electron-is-dev');
 
 function createWindow() {
     const win = new BrowserWindow({
+        minWidth:600,
         width: 600,
-        height: 510,
+        maxWidth: 600,
+
+        minHeight:600,
+        height: 600,
+        maxHeight: 600,
+
+        center: true,
+        resizable: false,
         autoHideMenuBar: true,
+
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
